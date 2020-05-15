@@ -1,6 +1,10 @@
 
   let token = ''
+  let difficulty = ''
 
+  $('#easy').on('click', (event) => {
+    difficulty = 'easy'
+  })
   $.ajax({
 
    	"url": "https://opentdb.com/api_token.php?command=request"
@@ -14,7 +18,7 @@
 
     $.ajax({
 
-     	"url": "https://opentdb.com/api.php?amount=10&token=" + token,
+     	"url": "https://opentdb.com/api.php?amount=10&token=" + token + "&difficulty=" + difficulty,
 
     }).then((data)=> {
        console.log(data);
