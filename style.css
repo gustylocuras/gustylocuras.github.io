@@ -1,4 +1,31 @@
-img {
-  width: 100px;
-  height: 100px
+.modal {
+  display: block;
+  position:fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.4)
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fefefe;
+  width: 30%;
+  margin: 10% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+
+}
+
+.difficulty-buttons {
+  display: flex;
+  justify-content: center;
+
+}
+
+.difficulty {
+  margin: auto 3%;
+  padding: 3px 10px;
 }

@@ -2,9 +2,11 @@
   let token = ''
   let difficulty = ''
 
-  $('#easy').on('click', (event) => {
-    difficulty = 'easy'
+  $('.difficulty').on('click', (event) => {
+    difficulty = $(event.currentTarget).text().toLowerCase()
+    $('#modal').css('display', 'none')
   })
+
   $.ajax({
 
    	"url": "https://opentdb.com/api_token.php?command=request"
