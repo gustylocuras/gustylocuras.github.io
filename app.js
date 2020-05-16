@@ -29,6 +29,47 @@
                   .addClass('category')
                   .text(question.category)
                   .appendTo($questionBox)
+         const $question =
+                  $('<h3>')
+                  .addClass('question')
+                  .text(question.question)
+                  .insertAfter($category)
+         const $answers =
+                  $('<div>')
+                  .addClass('answers')
+                  .insertAfter($question)
+                  if(question.type === 'boolean'){
+                    const $correct =
+                            $('<div>')
+                            .addClass('correct-answer')
+                            .text(question.correct_answer)
+                            .appendTo($answers)
+                    //populate with correct answer data access
+                    const $incorrect =
+                            $('<div>')
+                            .addClass('incorrect-answer')
+                            .text(question.incorrect_answer)
+                            .appendTo($answers)
+                    //populate with incorrect answer data access
+                  } else if(question.type === 'multiple'){
+                    const $correct =
+                            $('<div>')
+                            .addClass('correct-answer')
+                            .text(question.correct_answer)
+                            .appendTo($answers)
+                    //populate with correct answer data access
+                    const $incorrect = () => {
+                      for(let incorrectOption of question.incorrect_answers){
+                        const $incorrectOption =
+                                    $('<div>')
+                                    .addClass('incorrect-answer')
+                                    .text(incorrectOption)
+                                    .appendTo($answers)
+                      }
+                    }
+                    $incorrect() //debug
+
+                  }
 
        }
 
