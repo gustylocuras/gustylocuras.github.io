@@ -1,3 +1,7 @@
+
+/* modal start page */
+
+
 .modal {
   display: block;
   position:fixed;
@@ -13,7 +17,7 @@
   align-items: center;
   background-color: #fefefe;
   width: 30%;
-  margin: 10% auto; /* 15% from the top and centered */
+  margin: 10% auto;
   padding: 20px;
   border: 1px solid #888;
 
@@ -28,4 +32,28 @@
 .difficulty {
   margin: auto 3%;
   padding: 3px 10px;
+}
+
+/* question container carousel */
+
+.question-container {
+  width: 35%;
+  height: 380px;
+  margin:auto;
+}
+
+.question-container div {
+  display: none;
+}
+
+.question-container div:first-of-type {
+  display: block;
+}
+
+/* each question box */
+
+.question-box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
