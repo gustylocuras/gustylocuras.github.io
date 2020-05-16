@@ -57,3 +57,7 @@
   flex-direction: column;
   width: 100%;
 }
+
+.answers div {
+  display: block;
+}

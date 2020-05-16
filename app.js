@@ -32,7 +32,7 @@
          const $question =
                   $('<h3>')
                   .addClass('question')
-                  .text(question.question)
+                  .text(question.question.replace(/&quot;/g, "'").replace(/&#039;/g, "'"))
                   .insertAfter($category)
          const $answers =
                   $('<div>')
@@ -48,7 +48,7 @@
                     const $incorrect =
                             $('<div>')
                             .addClass('incorrect-answer')
-                            .text(question.incorrect_answer)
+                            .text(question.incorrect_answers[0])
                             .appendTo($answers)
                     //populate with incorrect answer data access
                   } else if(question.type === 'multiple'){
