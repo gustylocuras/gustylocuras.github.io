@@ -67,12 +67,41 @@
                                     .appendTo($answers)
                       }
                     }
-                    $incorrect() //debug
+                    $incorrect()
 
                   }
 
        }
+       let currentQuestionIndex = 0
+       const numOfQuestions = $('.question-container').children().length - 1 //might need to change this for result block
 
+        const switchNext = () => {
+          $('.question-container').children().eq(currentQuestionIndex).css('display', 'none')
+          if(currentQuestionIndex < numOfQuestions){
+            currentQuestionIndex++
+          } else {
+            currentQuestionIndex = 0
+          }
+          $('.question-container').children().eq(currentQuestionIndex).css('display', 'block')
+        }
+
+       //answers UI's (explore toggle class to animated more complex)
+          $('.incorrect-answer').on('click', (event) => {
+            $(event.currentTarget)
+                    .css('background', 'red')
+                    .css('transition-duration', '1s')
+                    .css('color', 'white')
+            setTimeout(switchNext, 1500)
+            // switchNext()
+
+
+          })
+          $('.correct-answer').on('click', (event) => {
+            $(event.currentTarget)
+                    .css('background', 'green')
+                    .css('color', 'white')
+                    .css('transition-duration', '1s')
+          })
 
 
     });
