@@ -1,6 +1,7 @@
 
   let token = ''
   let difficulty = ''
+  let scoreBoard = 0
 
   $.ajax({
 
@@ -72,6 +73,10 @@
                   }
 
        }
+       const $results = $('<div>').addClass('question-container')
+       const $score = $('<h2>').addClass('score-board')
+       $results.append($score)
+       $('.question-container').append($results)
        let currentQuestionIndex = 0
        const numOfQuestions = $('.question-container').children().length - 1 //might need to change this for result block
 
@@ -101,7 +106,12 @@
                     .css('background', 'green')
                     .css('color', 'white')
                     .css('transition-duration', '1s')
+            scoreBoard++
+            $score.text(`Your score is: ${scoreBoard*10}%`)
+            setTimeout(switchNext, 1500)
           })
+
+
 
 
     });
