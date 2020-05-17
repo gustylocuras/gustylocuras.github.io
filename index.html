@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <link rel="stylesheet" href="style.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
     <meta charset="utf-8">
     <title></title>
   </head>
@@ -12,9 +12,9 @@
         <h3>Welcome to trivia</h3>
         <h4>So...what's gonna be today?</h4>
         <div class="difficulty-buttons">
-          <button type="submit" class="difficulty" id = "easy" name="button">EASY</button>
-          <button type="submit" class="difficulty" id = "medium" name="button">MEDIUM</button>
-          <button type="submit" class="difficulty" id = "hard" name="button">HARD</button>
+          <div class="difficulty" id = "easy">EASY</div>
+          <div class="difficulty" id = "medium">MEDIUM</div>
+          <div class="difficulty" id = "hard">HARD</div>
         </div>
       </div>
     </div>
@@ -22,9 +22,9 @@
     <div class="question-container">
 
     </div>
-    <button type="button" id = "next" name="button">  -> </button>
 
 
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="app.js" charset="utf-8"></script>
   </body>
 </html>

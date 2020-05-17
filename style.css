@@ -26,12 +26,15 @@
 .difficulty-buttons {
   display: flex;
   justify-content: center;
+  width: 50%;
+  height:30%;
 
 }
 
 .difficulty {
   margin: auto 3%;
   padding: 3px 10px;
+  border: 1px solid grey;
 }
 
 /* question container carousel */
@@ -59,5 +62,13 @@
 }
 
 .answers div {
+  display: block;
+}
+
+.restart {
+  border: 1px solid grey;
+}
+
+#results {
   display: block;
 }

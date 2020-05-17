@@ -1,4 +1,10 @@
 
+
+
+
+const start = function (){
+  $('.question-container').empty()
+
   let token = ''
   let difficulty = ''
   let scoreBoard = 0
@@ -13,8 +19,13 @@
   });
 
 
+
+  $('#modal').css('display', 'block')
+
+
   $('.difficulty').on('click', (event) => {
     difficulty = $(event.currentTarget).text().toLowerCase()
+    $('.difficulty').off()
     $('#modal').css('display', 'none')
 
     $.ajax({
@@ -43,20 +54,20 @@
                     const $correct =
                             $('<div>')
                             .addClass('correct-answer')
-                            .text(question.correct_answer)
+                            .text(question.correct_answer.replace(/&quot;/g, "'").replace(/&#039;/g, "'"))
                             .appendTo($answers)
                     //populate with correct answer data access
                     const $incorrect =
                             $('<div>')
                             .addClass('incorrect-answer')
-                            .text(question.incorrect_answers[0])
+                            .text(question.incorrect_answers[0].replace(/&quot;/g, "'").replace(/&#039;/g, "'"))
                             .appendTo($answers)
                     //populate with incorrect answer data access
                   } else if(question.type === 'multiple'){
                     const $correct =
                             $('<div>')
                             .addClass('correct-answer')
-                            .text(question.correct_answer)
+                            .text(question.correct_answer.replace(/&quot;/g, "'").replace(/&#039;/g, "'"))
                             .appendTo($answers)
                     //populate with correct answer data access
                     const $incorrect = () => {
@@ -64,7 +75,7 @@
                         const $incorrectOption =
                                     $('<div>')
                                     .addClass('incorrect-answer')
-                                    .text(incorrectOption)
+                                    .text(incorrectOption.replace(/&quot;/g, "'").replace(/&#039;/g, "'"))
                                     .appendTo($answers)
                       }
                     }
@@ -73,8 +84,11 @@
                   }
 
        }
-       const $results = $('<div>').addClass('question-container')
+       const $results = $('<div>').addClass('question-box').attr('id', 'results')
        const $score = $('<h2>').addClass('score-board')
+       const $restart = $('<div>').addClass('restart').text('RESTART')
+       $results.append($restart)
+       $restart.on('click', start)
        $results.append($score)
        $('.question-container').append($results)
        let currentQuestionIndex = 0
@@ -116,3 +130,5 @@
 
     });
   })
+}
+start()
