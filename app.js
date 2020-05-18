@@ -44,7 +44,7 @@ const start = function (){
          const $question =
                   $('<h3>')
                   .addClass('question')
-                  .text(question.question.replace(/&quot;/g, "'").replace(/&#039;/g, "'"))
+                  .text(question.question.replace(/&quot;/g, "'").replace(/&#039;/g, "'").replace(/&amp;/g, "and"))
                   .insertAfter($category)
          const $answers =
                   $('<div>')
@@ -54,20 +54,20 @@ const start = function (){
                     const $correct =
                             $('<div>')
                             .addClass('correct-answer')
-                            .text(question.correct_answer.replace(/&quot;/g, "'").replace(/&#039;/g, "'"))
+                            .text(question.correct_answer.replace(/&quot;/g, "'").replace(/&#039;/g, "'").replace(/&amp;/g, "and"))
                             .appendTo($answers)
                     //populate with correct answer data access
                     const $incorrect =
                             $('<div>')
                             .addClass('incorrect-answer')
-                            .text(question.incorrect_answers[0].replace(/&quot;/g, "'").replace(/&#039;/g, "'"))
+                            .text(question.incorrect_answers[0].replace(/&quot;/g, "'").replace(/&#039;/g, "'").replace(/&amp;/g, "and"))
                             .appendTo($answers)
                     //populate with incorrect answer data access
                   } else if(question.type === 'multiple'){
                     const $correct =
                             $('<div>')
                             .addClass('correct-answer')
-                            .text(question.correct_answer.replace(/&quot;/g, "'").replace(/&#039;/g, "'"))
+                            .text(question.correct_answer.replace(/&quot;/g, "'").replace(/&#039;/g, "'").replace(/&amp;/g, "and"))
                             .appendTo($answers)
                     //populate with correct answer data access
                     const $incorrect = () => {
@@ -75,7 +75,7 @@ const start = function (){
                         const $incorrectOption =
                                     $('<div>')
                                     .addClass('incorrect-answer')
-                                    .text(incorrectOption.replace(/&quot;/g, "'").replace(/&#039;/g, "'"))
+                                    .text(incorrectOption.replace(/&quot;/g, "'").replace(/&#039;/g, "'").replace(/&amp;/g, "and"))
                                     .appendTo($answers)
                       }
                     }
@@ -87,9 +87,9 @@ const start = function (){
        const $results = $('<div>').addClass('question-box').attr('id', 'results')
        const $score = $('<h2>').addClass('score-board')
        const $restart = $('<div>').addClass('restart').text('RESTART')
+       $results.append($score)
        $results.append($restart)
        $restart.on('click', start)
-       $results.append($score)
        $('.question-container').append($results)
        let currentQuestionIndex = 0
        const numOfQuestions = $('.question-container').children().length - 1 //might need to change this for result block
