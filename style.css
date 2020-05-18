@@ -78,9 +78,9 @@
 /* question container carousel */
 
 .question-container {
-  width: 40%;
+  width: 50%;
   height: 380px;
-  margin:auto;
+  margin:20% 30%;
   display:flex;
   flex-direction: column;
   justify-content: space-around;
