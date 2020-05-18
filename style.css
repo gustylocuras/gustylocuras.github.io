@@ -1,4 +1,5 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Comic+Neue:ital,wght@1,300&family=Rock+Salt&display=swap');
 /* modal start page */
 
 
@@ -23,6 +24,20 @@
 
 }
 
+.modal-content h3 {
+  font-family: 'Rock Salt', cursive;
+  letter-spacing: 1em;
+  text-align: center;
+  margin: 7px 3px;
+  padding: 3px auto;
+}
+
+.modal-content h4 {
+  font-family: 'Caveat', cursive;
+  font-size: 28px;
+  margin: 25px auto;
+}
+
 .difficulty-buttons {
   display: flex;
   justify-content: center;
@@ -35,14 +50,40 @@
   margin: auto 3%;
   padding: 3px 10px;
   border: 1px solid grey;
+  cursor: pointer;
+}
+
+#easy:hover {
+  transform: scale(1.3);
+  font-weight: bold;
+  color: white;
+  background: #27e60e;
+  box-shadow: 3px 3px 3px #27e60e;
+}
+#medium:hover {
+  transform: scale(1.3);
+  font-weight: bold;
+  color: white;
+  background: #05a8fa;
+  box-shadow: 3px 3px 3px #05a8fa;
+}
+#hard:hover {
+  transform: scale(1.3);
+  font-weight: bold;
+  color: white;
+  background: #fa0573;
+  box-shadow: 3px 3px 3px #fa0573;
 }
 
 /* question container carousel */
 
 .question-container {
-  width: 35%;
+  width: 40%;
   height: 380px;
   margin:auto;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .question-container div {
@@ -55,20 +96,42 @@
 
 /* each question box */
 
+.category {
+  font-family: 'Caveat', cursive;
+  font-size: 24px;
+  font-weight: 100;
+}
+
+.question {
+  font-family: 'Caveat', cursive;
+  font-size: 30px;
+  font-weight: 100;
+}
+
 .question-box {
   display: flex;
   flex-direction: column;
+  justify-content: space;
   width: 100%;
 }
 
+
 .answers div {
-  display: block;
+  font-family: 'Comic Neue', cursive;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 10px;
+  padding: 2px 8px;
+  border: 1px solid grey;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.answers div:hover {
+  box-shadow: 3px 3px 4px #b9c2c7;
+  transform: scale(1.1)
 }
 
 .restart {
   border: 1px solid grey;
-}
-
-#results {
-  display: block;
 }
