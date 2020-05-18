@@ -1,5 +1,5 @@
 
-
+let answerShuffle = []
 
 
 const start = function (){
@@ -55,33 +55,43 @@ const start = function (){
                             $('<div>')
                             .addClass('correct-answer')
                             .text(question.correct_answer.replace(/&quot;/g, "'").replace(/&#039;/g, "'").replace(/&amp;/g, "and"))
-                            .appendTo($answers)
-                    //populate with correct answer data access
+                            answerShuffle.push($correct)
+
                     const $incorrect =
                             $('<div>')
                             .addClass('incorrect-answer')
                             .text(question.incorrect_answers[0].replace(/&quot;/g, "'").replace(/&#039;/g, "'").replace(/&amp;/g, "and"))
-                            .appendTo($answers)
-                    //populate with incorrect answer data access
+                            answerShuffle.push($incorrect)
+                            for(let i = 2; i > 0; i--){
+                              let $answer = answerShuffle.splice(Math.floor(Math.random()*answerShuffle.length), 1)
+                              $answer[0].appendTo($answers)
+                            }
+                            answerShuffle = []
+
                   } else if(question.type === 'multiple'){
                     const $correct =
                             $('<div>')
                             .addClass('correct-answer')
                             .text(question.correct_answer.replace(/&quot;/g, "'").replace(/&#039;/g, "'").replace(/&amp;/g, "and"))
-                            .appendTo($answers)
-                    //populate with correct answer data access
+                            answerShuffle.push($correct)
+
                     const $incorrect = () => {
                       for(let incorrectOption of question.incorrect_answers){
                         const $incorrectOption =
                                     $('<div>')
                                     .addClass('incorrect-answer')
                                     .text(incorrectOption.replace(/&quot;/g, "'").replace(/&#039;/g, "'").replace(/&amp;/g, "and"))
-                                    .appendTo($answers)
+                                    answerShuffle.push($incorrectOption)
+
                       }
                     }
                     $incorrect()
-
-                  }
+                    console.log(answerShuffle.length);
+                    for( let i = 4; i > 0 ; i--){
+                      let $answer = answerShuffle.splice(Math.floor(Math.random()*answerShuffle.length), 1)
+                      $answer[0].appendTo($answers)
+                    }
+                  } answerShuffle = []
 
        }
        const $results = $('<div>').addClass('question-box').attr('id', 'results')
