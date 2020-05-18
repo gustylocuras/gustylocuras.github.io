@@ -168,10 +168,10 @@
 
 @media(max-width: 600px) {
 
-
   .modal {
     display: block;
     position:fixed;
+    margin: auto;
     z-index: 1;
     width: 100%;
     height: 100%;
@@ -182,153 +182,29 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #27e60e;
+    background-color: #fefefe;
     width: 90%;
-    margin: 1% 1%;
+    height: 50%;
+    margin: 15% 3%;
     padding: 5px;
     border: 1px solid #888;
 
   }
 
-  .modal-content h3 {
-    font-family: 'Rock Salt', cursive;
-    letter-spacing: 1em;
-    text-align: center;
-    margin: 7px 3px;
-    padding: 3px auto;
-  }
-
-  .modal-content h4 {
-    font-family: 'Caveat', cursive;
-    font-size: 28px;
-    margin: 25px auto;
-  }
-
-  .difficulty-buttons {
-    display: flex;
-    justify-content: center;
-    width: 50%;
-    height:30%;
-
-  }
-
-  .difficulty {
-    margin: auto 3%;
-    padding: 3px 10px;
-    border: 1px solid grey;
-    cursor: pointer;
-  }
-
-  #easy:hover {
-    transform: scale(1.3);
-    font-weight: bold;
-    color: white;
-    background: #27e60e;
-    box-shadow: 3px 3px 3px #27e60e;
-  }
-  #medium:hover {
-    transform: scale(1.3);
-    font-weight: bold;
-    color: white;
-    background: #05a8fa;
-    box-shadow: 3px 3px 3px #05a8fa;
-  }
-  #hard:hover {
-    transform: scale(1.3);
-    font-weight: bold;
-    color: white;
-    background: #fa0573;
-    box-shadow: 3px 3px 3px #fa0573;
-  }
-
-  /* question container carousel */
-
-
   .question-container {
     width: 100%;
     padding: 1px 1px;
-    height: 600px;
+    height: 500px;
     margin: 1px 1px;
     display:flex;
     flex-direction: column;
     justify-content: space-around;
   }
 
-  .question-container div {
-    display: none;
-  }
-
-  .question-container div:first-of-type {
-    display: block;
-  }
-
-  /* each question box */
-
-  .category {
-    font-family: 'Caveat', cursive;
-    color: #d92027;
-    font-size: 24px;
-    font-weight: 100;
-  }
-
-  .question {
-    font-family: 'Caveat', cursive;
-    color: #562349;
-    font-size: 30px;
-    font-weight: 100;
-  }
-
   .question-box {
-    border-radius: 10px;
-    padding: 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 100%;
-    margin: 10px 10px;
-    background: #f4a299;
-    box-shadow: 4px 4px 5px #ad6989;
+    width: 90%;
+    margin: 1% 1%;
+
   }
 
-
-  .answers div {
-    color: white;
-    background: #c060a1;
-    font-weight: bolder;
-    font-family: 'Comic Neue', cursive;
-    display:flex;
-    flex-direction: column;
-    justify-content: space-around;
-    margin: 10px;
-    padding: 2px 8px;
-    border: 1px solid ghostwhite;
-    border-radius: 10px;
-    cursor: pointer;
-  }
-  .answers div:hover {
-    box-shadow: 3px 3px 4px #ad6989;
-    transform: scale(1.1)
-  }
-
-  .score-board {
-    font-family: 'Comic Neue', cursive;
-    text-align: center;
-  }
-
-  .restart {
-    cursor: pointer;
-    border: 1px solid grey;
-    width:30%;
-    margin-left: 35%;
-    padding:4px;
-    text-align: center;
-  }
-
-  .restart:hover {
-    background: #ffad0a;
-    box-shadow: inset 3px 3px 4px #ffad0a;
-    color: white;
-    border: 2px solid white;
-    font-weight: bold;
-  }
 }
