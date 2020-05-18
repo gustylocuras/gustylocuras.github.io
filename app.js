@@ -118,7 +118,7 @@ const start = function (){
                     .css('background', 'red')
                     .css('transition-duration', '1s')
                     .css('color', 'white')
-            setTimeout(switchNext, 1500)
+            setTimeout(switchNext, 1000)
             // switchNext()
 
 
@@ -130,7 +130,7 @@ const start = function (){
                     .css('transition-duration', '1s')
             scoreBoard++
             $score.text(`Your score is: ${scoreBoard*10}%`)
-            setTimeout(switchNext, 1500)
+            setTimeout(switchNext, 1000)
           })
 
 

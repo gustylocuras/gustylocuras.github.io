@@ -35,19 +35,7 @@
   padding: 3px auto;
 }
 
-@keyframes rainbow {
-  0% { color: black; }
-  10% { color: crimson; }
-  25% { color: hotpink;}
-  30% { color: coral;}
-  40% { color: lightyellow; }
-  50% { color: palegreen; }
-  60% { color: mediumaquamarine; }
-  75% { color: steelblue; }
-  80% { color: darkviolet;}
-  90% { color: black; }
-  100% { color: grey; }
-}
+
 
 .modal-content h4 {
   color: #63b7af;
@@ -133,6 +121,9 @@
 }
 
 .question-box {
+  animation-name: pastel-box;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
   border-radius: 10px;
   padding: 25px;
   display: flex;
@@ -164,9 +155,50 @@
 }
 
 .score-board {
+  color: white;
   font-family: 'Comic Neue', cursive;
   text-align: center;
 }
+.score-board {
+  animation-name: rainbow-scale;
+  animation-duration: 3s;
+  animation-timing-function: ease-out;
+
+}
+@keyframes pastel-box {
+  0% { background: #fbe0ac; }
+  25% { background: #f5acb7; }
+  50% { background: #c3edea; }
+  100% { background: #4ebcd4; }
+}
+
+@keyframes rainbow-scale {
+  0% { color: white; transform: scale(1);}
+  10% { color: crimson; }
+  25% { color: hotpink; }
+  30% { color: coral; }
+  40% { color: lightyellow; }
+  50% { color: palegreen; }
+  60% { color: mediumaquamarine; transform: scale(1.5);}
+  75% { color: steelblue; }
+  80% { color: darkviolet; }
+  90% { color: black; }
+  100% { color: grey; transform: scale(1);}
+}
+@keyframes rainbow {
+  0% { color: black; }
+  10% { color: crimson; }
+  25% { color: hotpink;}
+  30% { color: coral;}
+  40% { color: lightyellow; }
+  50% { color: palegreen; }
+  60% { color: mediumaquamarine; }
+  75% { color: steelblue; }
+  80% { color: darkviolet;}
+  90% { color: black; }
+  100% { color: grey; }
+}
+
 
 .restart {
   cursor: pointer;
