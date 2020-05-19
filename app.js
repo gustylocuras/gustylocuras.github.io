@@ -70,7 +70,7 @@ const start = function (){
                     const $correct =
                             $('<div>')
                             .addClass('correct-answer')
-                            .text(question.correct_answer.replace(/&quot;/g, "'").replace(/&#039;/g, "'").replace(/&amp;/g, "and"))
+                            .text(question.correct_answer.replace(/&quot;/g, "'").replace(/&#039;/g, "'").replace(/&amp;/g, "and").replace(/&eacute;/g, "emon"))
                             answerShuffle.push($correct)
 
                     const $incorrect = () => {
