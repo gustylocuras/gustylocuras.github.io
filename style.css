@@ -1,5 +1,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Caveat&family=Comic+Neue:ital,wght@1,300&family=Rock+Salt&display=swap');
+
+body {
+  background: radial-gradient(#562349 20%, #ad6989 25%, #f4a299 30%, #fbe2b3 40%);
+}
+
 /* modal start page */
 .modal {
   display: block;
@@ -18,7 +23,7 @@
   align-items: center;
   background-color: #f9d89b;
   width: 30%;
-  margin: 20% auto;
+  margin: 25% auto;
   padding: 20px;
   border: 1px solid #888;
 
@@ -90,7 +95,7 @@
 .question-container {
   width: 40%;
   height: 380px;
-  margin: 20% auto;
+  margin: 20% 28%;
   display:flex;
   flex-direction: column;
   justify-content: space-around;
