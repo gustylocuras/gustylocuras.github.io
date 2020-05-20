@@ -325,29 +325,20 @@ img:nth-child(10){
 }
 
 
-
-
-
-
-
 @media(max-width: 600px) {
 
   .modal {
-
     height: 400px;
-    background-color: rgba(0,0,0,.2)
+
   }
 
   .modal-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     background-color: #f9d89b;
     width: 90%;
     height: 70%;
     margin: 15% 3%;
     padding: 5px;
-    border: 1px solid #888;
+
 
   }
 
@@ -356,9 +347,7 @@ img:nth-child(10){
     padding: 1px 1px;
     height: 500px;
     margin: 1px 1px;
-    display:flex;
-    flex-direction: column;
-    justify-content: space-around;
+
   }
 
   .question-box {
